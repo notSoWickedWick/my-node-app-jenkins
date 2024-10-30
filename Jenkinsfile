@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-    nodejs 'NodeJS' // Ensure this matches the NodeJS installation name in Jenkins
+        nodejs 'NodeJS' // Ensure this matches the NodeJS installation name in Jenkins
     }
     environment {
         GITHUB_REPO = 'https://github.com/notSoWickedWick/my-node-app-jenkins.git'
@@ -17,8 +17,7 @@ pipeline {
         steps {
             cleanWs() // Clean workspace before checkout
             git branch: env.BRANCH_NAME, url: env.GITHUB_REPO // Checkout specific branch
-            sh 'ls -la' // Print current directory conten
-            ts for debugging
+            sh 'ls -la' // Print current directory contents for debugging
         }
     }
     stage('Install Node Dependencies') { // Renamed for uniqueness
