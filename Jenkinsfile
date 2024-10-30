@@ -7,7 +7,7 @@ pipeline {
         GITHUB_REPO = 'https://github.com/notSoWickedWick/my-node-app-jenkins.git'
         BRANCH_NAME = 'main' // Specified the branch to checkout
     }
-    stages {
+    // stages {
         // stage('Install Zip Dependency') { // Renamed for uniqueness
 // steps {
 // sh 'apt update && sudo apt install zip -y'
